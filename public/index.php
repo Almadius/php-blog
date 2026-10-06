@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use App\Controller\CategoryController;
+use App\Controller\ArticleController;
 use App\Controller\HomeController;
 use App\Database;
 use App\Model\Article;
@@ -29,6 +30,13 @@ if ($page === 'category') {
         (int) ($_GET['id'] ?? 0),
         (string) ($_GET['sort'] ?? 'date'),
         (int) ($_GET['p'] ?? 1),
+    );
+    return;
+}
+
+if ($page === 'article') {
+    (new ArticleController($articles, $view))->show(
+        (int) ($_GET['id'] ?? 0),
     );
     return;
 }
