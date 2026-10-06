@@ -6,7 +6,7 @@
 
 .DEFAULT_GOAL := init
 
-.PHONY: init up seed down reset config
+.PHONY: init up seed down reset config css
 
 ifeq ($(OS),Windows_NT)
 SHELL := cmd.exe
@@ -27,6 +27,9 @@ up: config
 
 seed:
 	docker compose exec -T app php database/seed.php
+
+css:
+	npx --yes sass@1.77.8 scss/main.scss public/assets/css/main.css --style=expanded
 
 down:
 	docker compose down

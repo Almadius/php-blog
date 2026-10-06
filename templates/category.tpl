@@ -2,11 +2,11 @@
 
 {block name=content}
     <h1>{$category.name|escape}</h1>
-    <p>{$category.description|escape}</p>
+    <p class="lead">{$category.description|escape}</p>
 
-    <p>
-        <a href="index.php?page=category&id={$category.id|escape}&sort=date">По дате</a>
-        <a href="index.php?page=category&id={$category.id|escape}&sort=views">По просмотрам</a>
+    <p class="sort">
+        <a class="{if $sort == 'date'}is-active{/if}" href="index.php?page=category&id={$category.id|escape}&sort=date">По дате</a>
+        <a class="{if $sort == 'views'}is-active{/if}" href="index.php?page=category&id={$category.id|escape}&sort=views">По просмотрам</a>
     </p>
 
     {foreach $articles as $article}
@@ -17,14 +17,14 @@
                 </a>
             </h2>
             <p>{$article.description|escape}</p>
-            <p>{$article.published_at|escape}, просмотры: {$article.views|escape}</p>
+            <p class="meta">{$article.published_at|escape}, просмотры: {$article.views|escape}</p>
         </article>
     {foreachelse}
         <p>В этой категории пока нет статей.</p>
     {/foreach}
 
     {if $pages > 1}
-        <nav>
+        <nav class="pager">
             {for $number=1 to $pages}
                 {if $number == $page}
                     <span>{$number}</span>

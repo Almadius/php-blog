@@ -19,7 +19,7 @@
                 </article>
             {/foreach}
 
-            <a href="index.php?page=category&id={$section.id|escape}">Все статьи</a>
+            <a class="button" href="index.php?page=category&id={$section.id|escape}">Все статьи</a>
         </section>
     {/foreach}
 {/block}

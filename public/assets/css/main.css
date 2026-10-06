@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  background: #f3efe7;
+  color: #1d2430;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.55;
+}
+
+a {
+  color: #1e4d4a;
+}
+a:hover {
+  color: #143633;
+}
+
+.wrap {
+  width: min(860px, 100% - 2rem);
+  margin: 0 auto;
+}
+
+header {
+  background: #1e4d4a;
+}
+header .wrap {
+  padding: 1rem 0;
+}
+header a {
+  color: #fff;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+main {
+  width: min(860px, 100% - 2rem);
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+}
+main > h1 {
+  margin: 0 0 1.25rem;
+  font-size: 2.2rem;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 0.4rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  background: #1e4d4a;
+  color: #fff;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 0.92rem;
+  text-decoration: none;
+}
+.button:hover {
+  background: #143633;
+  color: #fff;
+}
+
+section {
+  background: #fffdf9;
+  border: 1px solid #e3dbd0;
+  border-radius: 14px;
+  padding: 1.25rem 1.4rem;
+  margin-bottom: 1rem;
+}
+section > h2 {
+  margin: 0 0 0.35rem;
+}
+section > p {
+  margin-top: 0;
+  color: #5e6872;
+}
+section article {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e3dbd0;
+}
+section article h3 {
+  margin: 0 0 0.3rem;
+}
+section article p {
+  margin: 0;
+  color: #5e6872;
+}
+
+main > article {
+  background: #fffdf9;
+  border: 1px solid #e3dbd0;
+  border-radius: 14px;
+  padding: 1.25rem 1.4rem;
+  margin-bottom: 0.8rem;
+}
+main > article h2 {
+  margin: 0 0 0.35rem;
+}
+
+.lead,
+.meta {
+  color: #5e6872;
+}
+
+.lead {
+  font-size: 1.08rem;
+}
+
+.text {
+  margin: 1rem 0;
+  font-size: 1.08rem;
+}
+
+article img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+.sort,
+.tags,
+.pager {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.sort,
+.tags {
+  margin: 0 0 1rem;
+}
+
+.sort a,
+.tags a,
+.pager a,
+.pager span {
+  padding: 0.3rem 0.7rem;
+  border: 1px solid #e3dbd0;
+  border-radius: 999px;
+  background: #fffdf9;
+  color: #1d2430;
+  text-decoration: none;
+}
+
+.sort a.is-active,
+.pager span {
+  border-color: #1e4d4a;
+  background: #1e4d4a;
+  color: #fff;
+}
+
+.similar {
+  margin-top: 1.5rem;
+}
+
+/*# sourceMappingURL=main.css.map */

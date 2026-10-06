@@ -4,10 +4,10 @@
     <article>
         <img src="{$article.image|escape}" alt="{$article.title|escape}">
         <h1>{$article.title|escape}</h1>
-        <p>{$article.description|escape}</p>
-        <div>{$article.body|escape|nl2br}</div>
-        <p>Просмотры: {$article.views|escape}</p>
-        <p>
+        <p class="lead">{$article.description|escape}</p>
+        <div class="text">{$article.body|escape|nl2br}</div>
+        <p class="meta">Просмотры: {$article.views|escape}</p>
+        <p class="tags">
             {foreach $categories as $category}
                 <a href="index.php?page=category&id={$category.id|escape}">{$category.name|escape}</a>
             {/foreach}
@@ -15,7 +15,7 @@
     </article>
 
     {if $similar}
-        <section>
+        <section class="similar">
             <h2>Похожие статьи</h2>
             {foreach $similar as $item}
                 <article>
