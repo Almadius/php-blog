@@ -1,10 +1,6 @@
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="utf-8">
-    <title>{$title|escape}</title>
-</head>
-<body>
+{extends file="layout.tpl"}
+
+{block name=content}
     <h1>Блог</h1>
 
     {foreach $sections as $section}
@@ -26,5 +22,4 @@
             <a href="index.php?page=category&id={$section.id|escape}">Все статьи</a>
         </section>
     {/foreach}
-</body>
-</html>
+{/block}
